@@ -1,0 +1,28 @@
+.side-bar {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px lightblue;
+}
+.card-link {
+  color: rgb(14, 229, 14);
+  font-size: 12px;
+}
+.date-style {
+  color: #808080b0;
+  font-size: 12px;
+  padding-top: 5px;
+}
+.card-title {
+  font-size: 14px;
+}
+.status-div {
+  height: 24px;
+}
+.icon {
+  font-size: 14px;
+}
+@media (width<= 992px) {
+  .status-div {
+    height: auto;
+  }
+}

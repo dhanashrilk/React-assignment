@@ -1,0 +1,53 @@
+.navbar a {
+  color: rgb(96, 93, 93);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar a:hover {
+  background-color: transparent;
+}
+
+span {
+  margin: 0 8px;
+  font-size: 20px;
+  margin-top: -6px;
+}
+.user-icon {
+  height: 40px;
+  width: 40px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+}
+.tabs1.active {
+  color: white !important;
+  font-weight: 500;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgb(49, 42, 179) 0%,
+    #025bd4 35%,
+    rgb(21, 107, 186) 100%
+  );
+}
+.tabs1 {
+  display: flex;
+}
+.badge {
+  padding: 7px;
+  top: 35%;
+  position: relative;
+  left: 45%;
+}
+@media (width <= 992px) {
+  .nav-link {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+  }
+}

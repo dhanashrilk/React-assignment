@@ -1,0 +1,31 @@
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.tab1 {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 20px 20px 0px 0px;
+  border: 1px solid rgb(202, 195, 195);
+  border-bottom: none;
+}
+
+.tab1.active {
+  color: white !important;
+  font-weight: 500;
+  border-radius: 20px 20px 0px 0px;
+  background: linear-gradient(
+    90deg,
+    rgb(49, 42, 179) 0%,
+    #025bd4 35%,
+    rgb(21, 107, 186) 100%
+  );
+}
+.tabs-section {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px lightblue;
+}
