@@ -3,46 +3,15 @@ import "./FileUpload.css";
 import { LuFileSymlink } from "react-icons/lu";
 import { MdOutlineFileUpload } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
+import PdfImage from "./download.jpg";
 
 const FileUpload = () => {
   const [files, setFiles] = useState([]);
   const [text, setText] = useState("");
 
   const handleFileChange = (event) => {
-    setFiles([...files, ...event.target.files]);
-  };
-
-  const handleFileUpload = async () => {
-    const formData = new FormData();
-    files.forEach((file) => {
-      formData.append("file", file);
-    });
-
-    try {
-      const response = await fetch("http://localhost:5000/upload", {
-        method: "POST",
-        body: formData,
-      });
-      const result = await response.json();
-      console.log(result.message);
-      fetchFiles(); // Refresh the file list after upload
-    } catch (error) {
-      console.error("Error uploading file:", error);
-    }
-  };
-
-  const fetchFiles = async () => {
-    try {
-      const response = await fetch("http://localhost:5000/files");
-      if (!response.ok) {
-        throw new Error("Network response was not ok " + response.statusText);
-      }
-
-      const result = await response.json();
-      setFiles(result);
-    } catch (error) {
-      console.error("Error fetching files:", error.message);
-    }
+    setFiles([...event.target.files]);
+    setText("");
   };
 
   return (
@@ -96,22 +65,29 @@ const FileUpload = () => {
       </div>
 
       <div className="file-list">
-        {files.map((file, index) => (
-          <div key={index} className="d-flex justify-content-between file-item">
-            <div>
-              <a href={file.url} target="_blank" rel="noopener noreferrer">
-                <img src="./img/pdf-icon" alt="" />
-                {file.name}
-              </a>
-            </div>
-            <div>
-              <IoMdClose />
-            </div>
+        {files.length > 0 && (
+          <div>
+            {files.map((file, index) => (
+              <div
+                key={index}
+                className="d-flex justify-content-between file-item"
+              >
+                <div>
+                  <a href={file.url} target="_blank" rel="noopener noreferrer">
+                    <img src={PdfImage} alt="" className="icon-img" />
+                    <span className="text-secondary">{file.name}</span>
+                    {/* <p>{(file.size / 1024).toFixed(2)} KB</p> */}
+                  </a>
+                </div>
+                <div>
+                  <IoMdClose />
+                </div>
+              </div>
+            ))}
+
+            <button className="button">Next</button>
           </div>
-        ))}
-        <button className="button" onClick={handleFileUpload}>
-          Next
-        </button>
+        )}
       </div>
     </div>
   );
