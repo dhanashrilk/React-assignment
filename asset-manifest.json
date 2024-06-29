@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/React-assigment/static/css/main.e7a92bf3.css",
-    "main.js": "/React-assigment/static/js/main.7b968092.js",
+    "main.js": "/React-assigment/static/js/main.830b8cee.js",
     "static/js/453.1f8f9fce.chunk.js": "/React-assigment/static/js/453.1f8f9fce.chunk.js",
     "index.html": "/React-assigment/index.html",
     "main.e7a92bf3.css.map": "/React-assigment/static/css/main.e7a92bf3.css.map",
-    "main.7b968092.js.map": "/React-assigment/static/js/main.7b968092.js.map",
+    "main.830b8cee.js.map": "/React-assigment/static/js/main.830b8cee.js.map",
     "453.1f8f9fce.chunk.js.map": "/React-assigment/static/js/453.1f8f9fce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7a92bf3.css",
-    "static/js/main.7b968092.js"
+    "static/js/main.830b8cee.js"
   ]
 }
