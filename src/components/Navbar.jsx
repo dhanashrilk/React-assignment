@@ -6,6 +6,7 @@ import { PiUsersThree, PiUserSwitch } from "react-icons/pi";
 import { IoHomeOutline, IoSettingsOutline } from "react-icons/io5";
 import { BsChatLeftText } from "react-icons/bs";
 import { FaRegBell } from "react-icons/fa";
+import Image from "./images.png";
 
 const Navbar = () => {
   const [activeTab, setActiveTab] = useState("Home");
@@ -114,7 +115,7 @@ const Navbar = () => {
                 </span>
               </span>
               <span className="user-icon">
-                <img src="./img/images.png" alt="" />
+                <img src={Image} alt="" />
               </span>
             </form>
           </div>

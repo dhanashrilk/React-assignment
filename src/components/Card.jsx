@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { RiProgress3Fill } from "react-icons/ri";
 import { MdOutlineCancel } from "react-icons/md";
 
-const Card = (props) => {
+const Card = () => {
   return (
     <div className="py-2">
       <div className="card p-0 mb-4">
